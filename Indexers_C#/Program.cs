@@ -35,6 +35,19 @@
                 return age[index];    
             }
         }
+
+        public int this[int index,int i]
+        {
+            set 
+            {
+                age[index] = value + i;
+            }
+            get 
+            {
+                return age[index];
+            }
+            
+        }
     }
     class Program
     {
@@ -42,7 +55,10 @@
         {
             Console.WriteLine("Hello, World!");
             Employee employee = new Employee();
-            employee[0] = 5;
+            //employee[0] = 5;
+
+            //overloaded indexer
+            employee[0,1] = 10;
             Console.WriteLine(employee[0]);
 
         }
